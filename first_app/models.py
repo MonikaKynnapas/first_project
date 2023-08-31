@@ -30,3 +30,10 @@ class Teacher(models.Model):
 class TeacherAdmin(admin.ModelAdmin):
     list_display = ['name', 'subject']
     list_per_page = 10
+
+class Subject(models.Model):
+    subject = models.CharField(max_length=100)
+
+
+class SubjectAdmin(admin.ModelAdmin):
+    list_display = ['subject']

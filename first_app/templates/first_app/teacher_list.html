@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Teacher list</h1>
+    <a href="{% url 'first_app:home' %}">Homepage</a>
+     <ul>
+        {% for teacher in object_list %}
+            <li>
+                {{ teacher.name }}
+                {{ teacher.subject }}
+
+            </li>
+        {% endfor %}
+<p></p>
+         Teachers is {{ object_list|length }}.
+    </ul>
+{% endblock %}
