@@ -13,4 +13,10 @@ urlpatterns = [
 
     path('teacher_list/', views.TeacherListView.as_view(), name='teacher_list'),
     path('teacher_create/', views.TeacherCreateView.as_view(), name='teacher_create'),
+
+    path('subject_list/', views.SubjectListView.as_view(), name='subject_list'),
+    path('subject_detail/<int:pk>', views.SubjectDetailView.as_view(), name='subject_detail'),
+    path('subject_create/', views.SubjectCreateView.as_view(), name='subject_create'),
+    path('subject_update/<int:pk>', views.SubjectUpdateView.as_view(), name='subject_update'),
+    path('subject_delete/<int:pk>', views.SubjectDeleteView.as_view(), name='subject_delete'),
 ]

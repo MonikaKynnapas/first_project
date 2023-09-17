@@ -25,15 +25,16 @@ class Teacher(models.Model):
     subject = models.CharField(max_length=20)
 
     # def __str__(self):
-        # return f'{self.name} õpetab {self.subject}'
-
+        # return f'{self.name} teaches {self.subject}'
 class TeacherAdmin(admin.ModelAdmin):
     list_display = ['name', 'subject']
-    list_per_page = 10
+    list_per_page = 5
 
 class Subject(models.Model):
     subject = models.CharField(max_length=100)
 
+    def __str__(self):
+        return f'{self.subject}'
 
 class SubjectAdmin(admin.ModelAdmin):
     list_display = ['subject']

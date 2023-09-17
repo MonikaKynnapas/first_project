@@ -21,5 +21,5 @@ from django.views.generic import RedirectView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('first_app/', include('first_app.urls')),
-    path('', RedirectView.as_view(url='first_app')), # redirect domain/first_app
+    path('', RedirectView.as_view(url='first_app')),  # redirect domain/first_app
 ]
